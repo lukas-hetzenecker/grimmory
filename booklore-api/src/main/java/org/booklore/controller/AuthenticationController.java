@@ -82,6 +82,7 @@ public class AuthenticationController {
         String username = headers.get(appProperties.getRemoteAuth().getHeaderUser());
         String email = headers.get(appProperties.getRemoteAuth().getHeaderEmail());
         String groups = headers.get(appProperties.getRemoteAuth().getHeaderGroups());
+        log.debug("Remote-Auth: headers: name: {}, username: {}, email: {}, groups: {}", appProperties.getRemoteAuth().getHeaderName(), appProperties.getRemoteAuth().getHeaderUser(), appProperties.getRemoteAuth().getHeaderEmail(), appProperties.getRemoteAuth().getHeaderGroups());
         log.debug("Remote-Auth: retrieved values from headers: name: {}, username: {}, email: {}, groups: {}", name, username, email, groups);
         log.debug("Remote-Auth: remote auth settings: {}", appProperties.getRemoteAuth());
 
