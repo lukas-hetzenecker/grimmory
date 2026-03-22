@@ -74,10 +74,10 @@ jobs:
             APP_REVISION=${{ env.commit_sha }}
           cache-from: |
             type=gha,scope=image-shared
-            type=registry,ref=ghcr.io/grimmory-tools/grimmory:buildcache
+            type=registry,ref=ghcr.io/lukas-hetzenecker/grimmory:buildcache
           cache-to: |
             type=gha,scope=image-shared,mode=max
-            type=registry,ref=ghcr.io/grimmory-tools/grimmory:buildcache,mode=max
+            type=registry,ref=ghcr.io/lukas-hetzenecker/grimmory:buildcache,mode=max
 
       - name: Publish Draft GitHub Release
         env:
